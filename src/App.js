@@ -42,10 +42,7 @@ function App() {
     const regex = /^\d{4}-\d{2}-\d{2}$/;
   
     if (regex.test(dateInput)) {
-      const date = new Date(dateInput);
-      return date.getFullYear() === parseInt(dateInput.substring(0, 4), 10) &&
-             date.getMonth() + 1 === parseInt(dateInput.substring(5, 7), 10) &&
-             date.getDate() === parseInt(dateInput.substring(8, 10), 10);
+      return true;
     }
     return false;
   }
